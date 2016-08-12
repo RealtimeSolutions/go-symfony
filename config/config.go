@@ -2,19 +2,28 @@ package config
 
 import (
 	"os"
-	"github.com/RealtimeSolutions/go-symfony/config/datatable"
-	"github.com/RealtimeSolutions/go-symfony/config/doctrine"
-	"github.com/RealtimeSolutions/go-symfony/config/monolog"
-	"github.com/RealtimeSolutions/go-symfony/config/rabbitmq"
+	"github.com/RealtimeSolutions/symfonyGoConf/config/datatable"
+	"github.com/RealtimeSolutions/symfonyGoConf/config/doctrine"
+	"github.com/RealtimeSolutions/symfonyGoConf/config/monolog"
+	"github.com/RealtimeSolutions/symfonyGoConf/config/rabbitmq"
 )
 
+func (c *Config) SetParameter(key, value string) {
+	if c.Parameters == nil {
+		c.Parameters = make(map[string]string)
+	}
+
+	c.Parameters[key] = value
+}
+
 type Config struct {
-	filename string
-	Doctrine doctrine.Doctrine
-	Common   Common
-	Wms      Wms
-	Rabbitmq rabbitmq.Config `yaml:"old_sound_rabbit_mq"`
-	Monolog  monolog.Config
+	filename   string
+	Doctrine   doctrine.Doctrine
+	Common     Common
+	Wms        Wms
+	Rabbitmq   rabbitmq.Config `yaml:"old_sound_rabbit_mq"`
+	Monolog    monolog.Config
+	Parameters map[string]string
 }
 
 type Common struct {
