@@ -23,6 +23,7 @@ func (d *Doctrine) UseDB(name string) *Database {
 type Dbal struct {
 	Default_connection string
 	Connections        map[string]*Database
+	Types              map[string]string
 }
 
 type Database struct {
