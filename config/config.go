@@ -2,10 +2,10 @@ package config
 
 import (
 	"os"
-	"realtime.eu/symfony/config/datatable"
-	"realtime.eu/symfony/config/doctrine"
-	"realtime.eu/symfony/config/monolog"
-	"realtime.eu/symfony/config/rabbitmq"
+	"github.com/RealtimeSolutions/go-symfony/config/datatable"
+	"github.com/RealtimeSolutions/go-symfony/config/doctrine"
+	"github.com/RealtimeSolutions/go-symfony/config/monolog"
+	"github.com/RealtimeSolutions/go-symfony/config/rabbitmq"
 )
 
 type Config struct {
