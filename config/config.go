@@ -2,10 +2,10 @@ package config
 
 import (
 	"os"
-	"github.com/RealtimeSolutions/symfonyGoConf/config/datatable"
-	"github.com/RealtimeSolutions/symfonyGoConf/config/doctrine"
-	"github.com/RealtimeSolutions/symfonyGoConf/config/monolog"
-	"github.com/RealtimeSolutions/symfonyGoConf/config/rabbitmq"
+	"github.com/RealtimeSolutions/go-symfony/config/datatable"
+	"github.com/RealtimeSolutions/go-symfony/config/doctrine"
+	"github.com/RealtimeSolutions/go-symfony/config/monolog"
+	"github.com/RealtimeSolutions/go-symfony/config/rabbitmq"
 )
 
 func (c *Config) SetParameter(key, value string) {
